@@ -2,8 +2,9 @@
     <head>
         <title>Harlei's Blog</title>
         <link rel="stylesheet" href="pyscript.css" />
-        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
         <link rel="icon" type="image/png" href="logo1.png"> 
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     </head>
     <body>
         <div class="banner">
@@ -18,9 +19,18 @@
                 <h1>Welcome to my Blog!</h1>
             </div>
         </div>
+        <div>
+        <center>
+        <b><p>Today is <u><label id='today'></label></u></p></b>
+        <py-script>
+            import datetime as dt
+            pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+        </py-script>
+        </center>
+        </div>
             <section id="section-one">
                 <div>
-                    <h1 style="text-align: center;">What's Hot?</h1>
+                    <h2 style="text-align: center; font-size: 50px;">What's Hot?</h2>
                 </div>
                         <p style="margin: 60px;">On October 26, 2024, I attended a campaign on data privacy and awareness.
                             During the event, it had made me realize certain actions that I have carelessly 
@@ -37,7 +47,7 @@
                         <p>In conclusion, data privacy is a fundamental human right that must be protected in the digital age. The Data Privacy Act of 2012 provides a legal framework for safeguarding personal information in the Philippines, but its effective implementation requires increased awareness and enforcement efforts. By educating the public about their rights and responsibilities, and by strengthening the enforcement of the law, we can create a more secure and privacy-friendly digital environment for all</p>
                     </section>
             <section id="section-two">
-                    <h1 style="margin: 0px;">Republic Act 10173</h1>
+                    <h2 style="text-align: center; margin: 0px; font-size: 50px;">Republic Act 10173</h2>
                         <div style="margin: 10px;">
                             <center>
                                 <hr width="70%" color="#ff077b" size="3px" />
@@ -68,6 +78,5 @@
                     The Data Privacy Act of 2012 is a significant step towards protecting the personal information of Filipinos. However, its effective implementation requires ongoing efforts to raise awareness, strengthen enforcement, and address emerging challenges in the digital age. As technology continues to evolve and new data privacy issues arise, it is essential to review and update the law to ensure that it remains relevant and effective in protecting the rights of individuals.
                 </p>
             </section>
-            
         </body>
 </html>
